@@ -7,3 +7,7 @@ from django.http  import HttpResponse,Http404
 def welcome(request):
 
     return render(request,'all-fold/welcome.html')
+
+def people(request):
+
+    return render(request,'all-fold/people.html')
