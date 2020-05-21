@@ -6,9 +6,18 @@ class Image(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to = 'image/', blank=True)
 
+    def save_image(self):
+        self.save()
+
+    # def delete_image(self):
+    #     self.delete() 
+
 class Category(models.Model):
     name = models.CharField(max_length =30)
     image = models.ForeignKey(Image)
+
+    # def save_category(self):
+    #     self.save()
 
 
 
