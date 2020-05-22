@@ -4,7 +4,7 @@ from django.db import models
 class Image(models.Model):
     name = models.CharField(max_length =30)
     description = models.TextField()
-    image = models.ImageField(upload_to = 'image/', blank=True)
+    image = models.ImageField(upload_to = 'blog', blank=True)
 
     def save_image(self):
         self.save()
