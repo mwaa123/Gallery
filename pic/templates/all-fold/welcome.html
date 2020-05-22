@@ -9,6 +9,9 @@
 {{block.super}}
 <div class="center">
     <h1>WELCOME</h1>
+    {% for image in images %}
+    <h2> {{image.name}}  </h2>
+    {% endfor %}
     <div class="btn"><a href="{%url 'people'%}">Enter</a></div>
   </div>
 {% endblock %}
