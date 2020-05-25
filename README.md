@@ -12,7 +12,7 @@ This a django app that contains my gallery on various categories
 * Have a desktop that has windows,ubuntu or any other
 * use the terminal to run your commands
 
-*Have an editor to be able to code your work eg.vs code
+* Have an editor to be able to code your work eg.vs code
 
 ## Installing
 
@@ -79,3 +79,9 @@ You can deploy this django app by following the following documentation.
     Inspiration
     pair programmers
     etc
+
+## contacts
+
+[ruthwanjiramugo@gmail.com]
+
+* RUTH MUGO
