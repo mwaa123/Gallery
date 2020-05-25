@@ -6,7 +6,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.category
-
+    # save category
     def save_category(self):
         self.save()
 
@@ -31,6 +31,23 @@ class Location(models.Model):
     def __str__(self):
         return self.location
 
+
+    def save_location(self):
+        self.save()
+     #Update location
+    @classmethod
+    def update_location(cls,name,update):
+        Location.objects.filter(location=name).update(location=update)  
+        updated=Location.objects.get(location=update)
+        return updated
+
+        
+    #Delete location    
+    @classmethod    
+    def delete_location(cls,location):
+        deleted=Location.objects.get(location=location).delete()
+        return deleted     
+
 class Image(models.Model):
     name = models.CharField(max_length =30)
     description = models.TextField()
@@ -50,22 +67,31 @@ class Image(models.Model):
 
     def save_image(self):
         self.save()
-
-# @classmethod
-# def search_image(cls, search_term):
-#     images = cls.objects.filter(category__category__icontains=search_term)
-#     return images
-
-
-#  @classmethod
-#     def search_image(cls,category):
-#         image=cls.objects.get(category=category)
-#         return image
+     #UPDATE IMAGE
+    # @classmethod
+    # def update_image(cls,name,update):
+    #     Image.objects.filter(image_name=name).update(image_name=update)
+    #     update=Image.objects.get(image_name=update)
+    #     return update    
         
-#     @classmethod
-#     def filter_by_location(cls,location):
-#         image=Image.objects.get(location=location)
-#         return image
+    #DELETE IMAGE    
+    @classmethod    
+    def delete_image(cls,image):
+        Image.objects.get(image_name=image).delete()
+        
+    #GET IMAGE BY ID
+    # @classmethod
+    # def get_image_by_id(cls,id):
+    #     image=Image.objects.filter(id=id)
+    #     return image
+        
+    @classmethod
+    def search_results(cls,category_image):
+        categories=Category.objects.filter(category=category_image)
+        for category in categories:          
+            image=cls.objects.filter(category=category)
+        return image
+    
 
 
 
@@ -86,12 +112,6 @@ class Image(models.Model):
 
 
 
-
-
-# @classmethod
-# def search_by_location(cls, search_term):
-#      images = cls.objects.filter(location__place=search_term)
-#      return images 
 
 
 
