@@ -3,25 +3,40 @@
 {% load static%}
 {% block styles %}
 {% bootstrap_css %}
-<link rel="stylesheet" href="{% static 'css/.css' %}">
+<link rel="stylesheet" href="{% static 'css/travel.css' %}">
 {% endblock %}
 {% block content %}
-{{block.super}}
-<div class="container">
-    {% for image in images %}
-    <h2> {{image.name}}  </h2>
-    <p>{{image.description}}</p>
-    {% endfor %}
-</div>
-<!--Display news Article images  -->
-{% if image.blog_image %}
-<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-  <img src="{{image_blog.url}}" class="img-responsive" alt="Image">
-</div>
-{%else%}
-<h1>This image  does not have an image</h1>
-{%endif%}
-</div>
+</style>
 
-</div> 
+<div class="container all" style="background-color: black;">
+{{block.super}}
+{% for image in images %}
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-image">
+        {% if image in images %}
+  <img src="{{image.image.url}}" class="thumbnail"alt="Image">
+<span class="card-title" style="text-align: center;color: blanchedalmond;">{{image.name}}</span>
+      </div>
+      {%endif%}
+      <div class="card-content">
+        <p style="text-align: center;color: blanchedalmond;">{{image.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>   
+   
+{% endfor %}
+</div>
 {% endblock %}
+
+
+
+
+
+
+
+
+
+

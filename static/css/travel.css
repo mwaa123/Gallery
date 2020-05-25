@@ -1,0 +1,17 @@
+.thumbnail:hover {
+    position:relative;
+    top:-50px;
+    left:-50px;
+    width:700px;
+    height:auto;
+    display:block;
+    z-index:999;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+
+
+  }
