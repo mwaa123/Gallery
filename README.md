@@ -30,7 +30,7 @@ $ sudo apt-get install python3-pip
 
 * For mac 0S use this command to install pip
 
-sudo easy_install pip
+$ sudo easy_install pip
 
 * Open your editor and run the cloned repository and install the modules below to run effectivey.
 
@@ -40,11 +40,11 @@ $ pip install -r requirements.txt
 
 * To run the class test use the following commands in the terminal
 
-python3.6 manage.py test pic
+$ python3.6 manage.py test pic
 
 * Now your ready to run the modules type the fillowing commands to run the app locally.
 
-python3.6 manage.py runserver
+$ python3.6 manage.py runserver
 
 ## Running the tests
 
@@ -61,13 +61,13 @@ You can deploy this django app by following the following documentation.
 
 * If you want to contribute to my app please follow the instructions below
 
-    Fork the project repository/clone
-    Creat this new Branch (git checkout -b feature/improve-pic-(name of module))
-    Make intended changes and Add the changes made
-    Make the commit(git commit -m "improve-gala-(name of module)")
-    Create an upstream if u dont have one(git remote add origin and the git repo url
-    Push the changes to my repo(git push origin improve-gala-(name of module)
-    Create a pull request.
+* Fork the project repository/clone
+* Creat this new Branch (git checkout -b feature/improve-pic-(name of module))
+* Make intended changes and Add the changes made
+* Make the commit(git commit -m "improve-gala-(name of module)")
+* Create an upstream if u dont have one(git remote add origin and the git repo url
+* Push the changes to my repo(git push origin improve-gala-(name of module)
+* Create a pull request.
 
 ## License
 
