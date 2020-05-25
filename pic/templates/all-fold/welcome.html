@@ -1,5 +1,10 @@
 {%extends 'all-fold/base.html'%}
-
+{% load bootstrap3 %}
+{% load static%}
+{% block styles %}
+{% bootstrap_css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
 {% block content %}
 {{block.super}}
 <div class="center">
