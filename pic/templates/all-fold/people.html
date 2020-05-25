@@ -5,7 +5,9 @@
 {% bootstrap_css %}
 <link rel="stylesheet" href="{% static 'css/diff.css' %}">
 {% endblock %}
-
+position:absolute;
+    left:20%;
+    top:25%;
 {% block content %} 
 
  <!-- Adding a search form  -->
@@ -27,7 +29,7 @@
 <!-- {% include "navbar.html" %} -->
 <div class="dew" style="background-color: black;">
 <div class="container">
-<h1 style="color: #66fcf1; ">Different pictures</h1><hr>
+<h1 style="color: #66fcf1; ">Tangled  pictures</h1><hr>
 <div id="gallery" class="container-fluid">  
   <img src="{% static 'images/ariana.jpg'%}" class="thumbnail">
   <img src="{% static 'images/ok.jpg'%}" class="card img-responsive">
