@@ -3,10 +3,8 @@ from .models import Image,Location,Category
 
 
 class ImageTestClass(TestCase):
-
     def setUp(self):
         self.photoshoot= Image(name = 'photoshoot', description ='sunset photo')
-        
     def test_instance(self):
         self.assertTrue(isinstance(self.photoshoot,Image))
 
@@ -16,26 +14,8 @@ class ImageTestClass(TestCase):
         self.assertTrue(len(images) > 0)
 
 
-    # def test_updated_image(self):
-    #     update=Image.update_image(self.image1.image_name,'Updated Test')
-    #     self.assertEqual(update.image_name,'Updated Test')
-     
-     # Detlete image   
-    def test_delete_image(self):
-        Image.delete_image(self)
-        self.assertTrue(len(Image.objects.all())==0)
-        
-    #Get image by id
-    # def test_get_image_by_id(self):
-    #     image=Image.get_image_by_id(self.id)
-    #     self.assertTrue(len(image)==1)
-        
-    #Seach by category
-        image=Image.search_image(self.category.category)
-        self.assertTrue(len(image)>0)    
 
-
-# tTest for category
+# Test for category
 class CategoryTestClass(TestCase):
 
 
@@ -58,11 +38,7 @@ class CategoryTestClass(TestCase):
         update=Category.objects.get(category=update)
         return update   
 
-    def test_delete_category(self):
-        Category.delete_category(self.category.category)
-        self.assertTrue(len(Category.objects.all())==0)
-
-
+    
 
 
 

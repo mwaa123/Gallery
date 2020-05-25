@@ -40,7 +40,6 @@ class Location(models.Model):
         Location.objects.filter(location=name).update(location=update)  
         updated=Location.objects.get(location=update)
         return updated
-
         
     #Delete location    
     @classmethod    
@@ -67,33 +66,7 @@ class Image(models.Model):
 
     def save_image(self):
         self.save()
-     #UPDATE IMAGE
-    # @classmethod
-    # def update_image(cls,name,update):
-    #     Image.objects.filter(image_name=name).update(image_name=update)
-    #     update=Image.objects.get(image_name=update)
-    #     return update    
         
-    #DELETE IMAGE    
-    @classmethod    
-    def delete_image(cls,image):
-        Image.objects.get(image_name=image).delete()
-        
-    #GET IMAGE BY ID
-    # @classmethod
-    # def get_image_by_id(cls,id):
-    #     image=Image.objects.filter(id=id)
-    #     return image
-        
-    @classmethod
-    def search_results(cls,category_image):
-        categories=Category.objects.filter(category=category_image)
-        for category in categories:          
-            image=cls.objects.filter(category=category)
-        return image
-    
-
-
 
 
 

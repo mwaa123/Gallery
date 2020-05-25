@@ -24,7 +24,7 @@
     {% for image in images %}
       <div class="col-sm-6 col-md-3">
           <h1 style="color: cyan;">{{image.name}}</h1>
-          <img src="{{image.image.url}}" style="width: 280px;height: 350px;" class="thumbnail"alt="Image">
+          <img src="{{image.image.url}}" style="width: 325px;height: 405px;" class="zoom"alt="Image">
 
           <div class="text-block">
             <p  style="color: cyan;" >{{image.description}} </p>
@@ -38,7 +38,7 @@
 </div>
 </div>
 {% block scripts %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/a#jax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src = "{% static 'js/diff.js' %}"></script>
 {% bootstrap_javascript %}
 {% endblock %}

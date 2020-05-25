@@ -1,5 +1,5 @@
 
-## Project title
+# Project title
 
 MY-GALLERY
 
